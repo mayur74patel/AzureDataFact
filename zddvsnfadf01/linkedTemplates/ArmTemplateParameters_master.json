@@ -8,6 +8,9 @@
 		"ls_blob_connectionString": {
 			"value": ""
 		},
+		"ls_snf_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
