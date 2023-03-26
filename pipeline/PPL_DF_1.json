@@ -1,0 +1,45 @@
+{
+	"name": "PPL_DF_1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DATAFLOW_1",
+						"type": "DataFlowReference",
+						"parameters": {
+							"EmpId": {
+								"value": "'@{pipeline().parameters.EmpId}'",
+								"type": "Expression"
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"EmpId": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-03-19T13:53:29Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
